@@ -1,0 +1,361 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    background: #f5f5f5;
+}
+
+.header, .footer, .content, .us {
+    padding: 0 108px;
+}
+
+.header{
+    height: 40px;
+    background-color: #333;
+}
+
+.header ul{
+    color: #b0b0b0;
+    font-size: .5em;
+    align-items: center;
+    line-height: 40px;
+    display: inline;
+}
+
+.header ul:last-child{
+    float: right;
+}
+
+.header ul li{
+    display: inline;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.header ul li:hover{
+    color: #fff;
+}
+
+.footer{
+    background-color: #fff;
+    height: 272px;
+}
+
+.footer .footer-head{
+    height: 80px;
+}
+
+.footer .footer-head ul{
+    list-style: none;
+    color: #616161;
+    font-size: 16px;
+    line-height: 80px;
+}
+
+.footer .footer-head ul li{
+    float: left;
+    width: 20%;
+    text-align: center;
+}
+
+.footer-body{
+    padding: 20px 0 ;
+}
+
+.footer-body .footer-body-items{
+    width: 80%;
+    float: left;
+}
+
+.footer-body .footer-body-items dl{
+    width: 16%;
+    float: left;
+    /* text-align: center; */
+}
+
+.footer-body .footer-body-items dl dt{
+    font-size: 14px;
+    color: #424242;
+    height: 40px;
+}
+
+.footer-body .footer-body-items dl dd{
+    font-size: 12px;
+    color: #7f7f7f;
+    height: 29px;
+}
+
+.footer-body .footer-phone{
+    width: 20%;
+    float: left;
+}
+
+.footer .footer-phone .phone{
+    color: #ff6700;
+    font-size: 20px;
+    text-align: center;
+}
+
+.footer .footer-phone .text{
+    color: #616161;
+    font-size: 12px;
+    text-align: center;
+}
+
+.footer .footer-phone .button{
+    border: #ff6700 1px solid;
+    border-radius: .2em;
+    font-size: 12px;
+    color: #ff6700;
+    text-align: center;
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    margin: 20px auto 3px;
+}
+
+
+.content .nav{
+    height: 100px;
+}
+
+.logo{
+    float: left;
+    /* background: url(imgs/mi-logo.png) no-repeat  center; */
+    background-color: #ff6700;
+    height: 55px;
+    width: 55px;
+    margin-right: 190px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.logo::before, .logo::after{
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 55px;
+    width: 55px;
+    content: ''; 
+    transition: all .5s;
+    content: '';
+}
+
+.logo::before{
+    opacity: 1;
+    background: url(imgs/mi-logo.png) no-repeat 50% 50%;
+    transform: translate(0, 0);
+}
+.logo:hover::before{
+    opacity: 0;
+    transform: translateX(55px);
+}
+.logo::after{
+    opacity: 0;
+    background: url(imgs/mi-home.png) no-repeat 50% 50%;
+    transform: translate(0, 0);
+    margin-left: -55px;
+}
+.logo:hover::after{
+    opacity: 1;
+    transform: translateX(55px);
+}
+
+.content{
+    background: #fff;
+}
+
+.content .nav ul{
+    display: inline;
+    line-height: 100px;
+}
+
+.content .nav ul li{
+    display: inline;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.content .nav ul li:hover{
+    color: #ff6700;
+}
+
+.content .nav ul li:hover .drop-menu{
+    display: block;
+}
+
+.content .nav ul li .drop-menu{
+    position: absolute;
+    display: block;
+    height: 230px;
+    width: 100%;
+    background: #fff;
+    border-top: 1px solid#e0e0e0;
+}
+
+.nav-drop-menu{
+    position: absolute;
+    /* height: 230px; */
+    height: 0;
+    width: 100%;
+    background: #fff;
+    display: block;
+    border-top: 1px solid #e0e0e0;
+    transition: 1s;
+    z-index: 10;
+    border-bottom: 1px solid #e0e0e0;
+    transition:  height 500ms;
+    overflow: hidden;
+}
+
+.nav-drop-menu ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 35px 12px 0;
+    width: 16.3%;
+}
+.nav-drop-menu ul li img{
+    width: 160px;
+    height: 110px;
+}
+.nav-drop-menu ul li .title{
+    color: #333;
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.nav-drop-menu ul li .price{
+    color: #ff6700;
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.content .banner{
+    height: 460px;
+    background: url(imgs/banner1.jpg) no-repeat 50% 50%;
+    background-position: right top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.content .banner .catagory{
+    background-color: rgba(105,101,101,.6);
+    width: 234px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.content .banner .catagory ul{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #fff;
+    list-style: none;
+}
+
+.content .banner .catagory ul li{
+    line-height: 42px;
+    margin-left: 30px;
+}
+
+.content .raw{
+    margin-top: 10px;
+    height: 170px;
+}
+
+.content .raw .raw-one{
+    height: 170px;
+    width: 234px;
+    padding: 3px;
+    float: left;
+}
+
+.content .raw .raw-one .raw-item{
+    width: 30%;
+    height: 50%;
+    padding: .5px;
+    display: inline-block;
+    text-align: center;
+}
+
+.content .raw .raw-one .raw-item img{
+    width: 24px;
+    margin-top: 18px;
+}
+
+.content .raw .raw-one .raw-item span{
+    color: #fff; 
+    font-size: 12px;
+    display: block;
+}
+
+.content .raw .raw-first{
+    background-color: #5f5750;
+}
+
+.content .raw .raw-img{
+    width: 316px;
+    margin-left: 13px;
+    float: left;
+}
+
+.content .raw .one{
+    background: url(imgs/img1.jpg);
+    background-size: 100% 100%;
+}
+
+.content .raw .two{
+    background: url(imgs/img2.jpg);
+    background-size: 100% 100%;
+}
+
+.content .raw .three{
+    background: url(imgs/img3.jpg);
+    background-size: 100% 100%;
+}
+
+
+.us{
+    height: 220px;
+}
+
+.us .logo{
+    margin-right: 6px;
+}
+.us .us-info{
+    padding-left: 65px;
+}
+
+.us .us-info .product{
+    color: #757575;
+    font-size: 12px;
+    padding-top: 20px;
+}
+
+.us .us-info .text{
+    color: #b0b0b0;
+    font-size: 12px;
+}
+.us .us-info .us-cert{
+    margin-top: 5px;
+}
+.us .us-info .us-cert img{
+    width: 85px;
+    height: 28px;
+}
+
+.us .us-info .slogan{
+    box-sizing: border-box;
+    text-align: center;
+    padding-top:20px ;
+    
+}
+
+.us .us-info .slogan img{
+    height: 100%;
+}
