@@ -253,6 +253,28 @@
     /* background: url(imgs/banner1.jpg) no-repeat 100% 100%; */
     /* background-size: cover; */
 }
+.banner .banner-left, .banner .banner-right{
+    position: absolute;
+    top: 40%;
+    z-index: 20;
+    height: 69px;
+    width: 41px;
+}
+.banner .banner-left{
+    left: 234px;
+    background: url(imgs/icon-slides.png) no-repeat -84px 50%;
+}
+.banner  .banner-left:hover{
+    left: 234px;
+    background-position-x: 0;
+}
+.banner .banner-right{
+    right: 0;
+    background: url(imgs/icon-slides.png) no-repeat -125px 50%;
+}
+.banner .banner-right:hover{
+    background-position-x: -41px;
+}
 
 .banner .banner-real .banner-item{
     position: absolute;
@@ -266,6 +288,33 @@
 }
 .banner .banner-real .banner-item img{
     height: 100%;
+}
+
+.banner  .pagination{
+    width: 400px;
+    height: 21px;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+
+    padding-right: 30px;
+    text-align: right;
+}
+
+.banner .pagination .pagination-item{
+    border: 1.7px solid hsla(0,10%,50%,.9);
+    border-radius: 10px;
+    height: 8px;
+    width: 8px;
+    margin-right: 20px;
+    display: inline-block;
+    vertical-align: auto;
+    background: hsla(0,0%,0,.4);
+    cursor: pointer;
+}
+
+.banner  .pagination .pagination-item.active, .banner  .pagination .pagination-item:hover{
+    background: #ff6700;
 }
 
 .content .banner .catagory{

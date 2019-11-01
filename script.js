@@ -47,16 +47,20 @@ window.onload= function(){
 
 function banner(){
     var banners = document.getElementsByClassName("banner-real")[0];
+    var pagination = document.getElementsByClassName("pagination")[0];
     var i = 1;
     var len = banners.children.length;
     var last = 0;
     setInterval(function(){
         console.log(i);
-        i = (i +1) % len;
+        
         banners.children[i].classList.add('active');
-        if(last){
+        pagination.children[i].classList.add('active');
+        if(undefined != last){
             banners.children[last].classList.remove('active');
+            pagination.children[last].classList.remove('active');
         }
         last = i;
+        i = (i +1) % len;
     }, 2800);
 }
