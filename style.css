@@ -240,11 +240,34 @@
 .content .banner{
     position: relative;
     height: 460px;
-    background: url(imgs/banner1.jpg) no-repeat 50% 50%;
-    background-position: right top;
-    background-size: cover;
-    background-repeat: no-repeat;
+    /* background: url(imgs/banner1.jpg) no-repeat 50% 50%; */
+    /* background-position: right top; */
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
 }
+
+.banner .banner-real{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /* background: url(imgs/banner1.jpg) no-repeat 100% 100%; */
+    /* background-size: cover; */
+}
+
+.banner .banner-real .banner-item{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s ;
+}
+.banner .banner-real .banner-item.active{
+    opacity: 1;
+}
+.banner .banner-real .banner-item img{
+    height: 100%;
+}
+
 .content .banner .catagory{
     background-color: rgba(105,101,101,.6);
     width: 234px;
@@ -274,7 +297,8 @@
     top: 0;
     left: 234px;
     height: 100%;
-    width: 992px;
+    /* width: 992px; */
+    /* width: 100%; */
     border: .5px solid #e0e0e0;
     background: #fff;
     display: none;
