@@ -21,14 +21,6 @@ window.onload= function(){
     for(var i = 0; i < catagoryUl.childNodes.length; i++){
         var li = catagoryUl.childNodes[i];
         if("LI" == li.nodeName){
-            // li.addEventListener('mouseover', function(){
-            //     console.log(1);
-            //     var detail = catagoryUl.childNodes[i].firstElementChild;
-            //     detail.style.display = 'block';
-            // });
-            // li.addEventListener('mouseout', function(){
-
-            // });
             li.addEventListener('mouseover', function(){
                 console.log(this.style);
                 var detail = this.firstElementChild;
