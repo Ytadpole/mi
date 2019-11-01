@@ -42,6 +42,7 @@
 .footer{
     background-color: #fff;
     height: 272px;
+    clear: both;
 }
 
 .footer .footer-head{
@@ -390,14 +391,16 @@
 
 .content .raw{
     margin-top: 10px;
-    height: 170px;
+    /* height: 170px; */
+    height: 100%;
 }
 
 .content .raw .raw-one{
     height: 170px;
     width: 234px;
     padding: 3px;
-    float: left;
+    display: inline-block;
+
 }
 
 .content .raw .raw-one .raw-item{
@@ -406,6 +409,8 @@
     padding: .5px;
     display: inline-block;
     text-align: center;
+    overflow: hidden;
+
 }
 
 .content .raw .raw-one .raw-item img{
@@ -424,28 +429,31 @@
 }
 
 .content .raw .raw-img{
-    width: 316px;
-    margin-left: 13px;
-    float: left;
+    /* width: 316px; */
+    width: 25%;
+    height: 170px;
+    margin-left: 14px;
+    /* background: url("imgs/img1.jpg");
+    background-size: cover; */
+}
+.content .raw .raw-img.img1{
+    background: url("imgs/img1.jpg");
+    background-size: cover;
 }
 
-.content .raw .one{
-    background: url(imgs/img1.jpg);
-    background-size: 100% 100%;
+.content .raw .raw-img.img2{
+    background: url("imgs/img2.jpg");
+    background-size: cover;
 }
 
-.content .raw .two{
-    background: url(imgs/img2.jpg);
-    background-size: 100% 100%;
-}
-
-.content .raw .three{
-    background: url(imgs/img3.jpg);
-    background-size: 100% 100%;
+.content .raw .raw-img.img3{
+    background: url("imgs/img3.jpg");
+    background-size: cover;
 }
 
 
 .us{
+    clear: both;
     height: 220px;
 }
 
