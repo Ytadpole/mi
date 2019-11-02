@@ -399,7 +399,7 @@
 
  .raw .raw-one{
     height: 170px;
-    width: 234px;
+    /* width: 234px; */
     padding: 3px;
     display: inline-block;
 
@@ -428,15 +428,13 @@
 
  .raw .raw-first{
     background-color: #5f5750;
+    width: 234px;
 }
 
  .raw .raw-img{
-    /* width: 316px; */
-    width: 25%;
+    width: 316px;
     height: 170px;
-    margin-left: 14px;
-    /* background: url("imgs/img1.jpg");
-    background-size: cover; */
+    margin-left: 9.8px;
 }
  .raw .raw-img.img1{
     background: url("imgs/img1.jpg");
@@ -507,6 +505,15 @@
 
 .detail img{
     margin-top: 10px;
+}
+
+.detail .title{
+    height: 58px;
+    vertical-align: center;
+}
+
+.detail .title .title-name{
+    line-height: 58px;
 }
 
 .detail1 .buttons{
