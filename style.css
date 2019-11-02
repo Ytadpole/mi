@@ -4,14 +4,18 @@
     box-sizing: border-box;
 }
 
-.container{
+.main{
     background: #f5f5f5;
 }
 
-.header, .footer, .content, .us {
-    padding: 0 108px;
+.container{
+    margin: 0 auto;
+    width: 1226px;    
 }
 
+.container-header{
+    background: #333;
+}
 .header{
     height: 40px;
     background-color: #333;
@@ -39,6 +43,9 @@
     color: #fff;
 }
 
+.container-footer{
+    background: #fff;
+}
 .footer{
     background-color: #fff;
     height: 272px;
@@ -119,7 +126,7 @@
 }
 
 
-.content .nav{
+ .nav{
     height: 100px;
 }
 
@@ -167,38 +174,30 @@
     transform: translateX(55px);
 }
 
-.content{
+.container-nav{
     background: #fff;
+    padding-bottom: 10px;
 }
 
-.content .nav ul{
+/* 导航nav条 start */
+.nav ul{
     display: inline;
     line-height: 100px;
 }
 
-.content .nav ul li{
+.nav ul li{
     display: inline;
     margin-right: 20px;
     cursor: pointer;
 }
 
-.content .nav ul li:hover{
+.nav ul li:hover{
     color: #ff6700;
 }
 
-.content .nav ul li:hover .drop-menu{
-    display: block;
-}
+/* 导航nav条 end */
 
-.content .nav ul li .drop-menu{
-    position: absolute;
-    display: block;
-    height: 230px;
-    width: 100%;
-    background: #fff;
-    border-top: 1px solid#e0e0e0;
-}
-
+/* 导航条 nav 下拉显示的 start */
 .nav-drop-menu{
     position: absolute;
     /* height: 230px; */
@@ -207,7 +206,7 @@
     background: #fff;
     display: block;
     /* border-top: 1px solid #e0e0e0; */
-    transition: 1s;
+    transition: .5s;
     z-index: 10;
     /* border-bottom: 1px solid #e0e0e0; */
     transition:  height 500ms;
@@ -237,8 +236,9 @@
     font-size: 12px;
     line-height: 20px;
 }
+/* 导航条 nav 下拉显示的 end */
 
-.content .banner{
+ .banner{
     position: relative;
     height: 460px;
     /* background: url(imgs/banner1.jpg) no-repeat 50% 50%; */
@@ -318,7 +318,7 @@
     background: #ff6700;
 }
 
-.content .banner .catagory{
+ .banner .catagory{
     background-color: rgba(105,101,101,.6);
     width: 234px;
     padding-top: 10px;
@@ -327,23 +327,23 @@
     
 }
 
-.content .banner .catagory ul{
+ .banner .catagory ul{
     margin-top: 10px;
     margin-bottom: 10px;
     color: #fff;
     list-style: none;
 }
 
-.content .banner .catagory ul li{
+ .banner .catagory ul li{
     line-height: 42px;
     padding-left: 30px;
     cursor: pointer;
 }
-.content .banner .catagory ul li:hover{
+ .banner .catagory ul li:hover{
     background: #ff6700;
 }
 
-.content .banner .catagory ul li .catagory-detail{
+ .banner .catagory ul li .catagory-detail{
     position: absolute;
     top: 0;
     left: 234px;
@@ -357,7 +357,7 @@
     display: none;
 }
 
-.content .banner .catagory ul li .catagory-detail ul{
+ .banner .catagory ul li .catagory-detail ul{
     color: #757575;
     margin: 0;
     padding: 0;
@@ -365,37 +365,37 @@
     width: 247px;
 }
 
-.content .banner .catagory ul li .catagory-detail ul li{
+ .banner .catagory ul li .catagory-detail ul li{
     padding: 18px 20px;
     line-height: 40px;
     margin: 0;
     cursor: pointer;
 }
 
-.content .banner .catagory ul li .catagory-detail ul li:hover{
+ .banner .catagory ul li .catagory-detail ul li:hover{
     color: #ff6700;
     background: #fff;
 }
 
-.content .banner .catagory ul li .catagory-detail ul li span{
+ .banner .catagory ul li .catagory-detail ul li span{
     /* color: #757575; */
     font-size: 14px;
 }
 
-.content .banner .catagory ul li .catagory-detail ul li img{
+ .banner .catagory ul li .catagory-detail ul li img{
     width: 40px;
     height: 40px;
     vertical-align: middle;
     margin-right: 12px;
 }
 
-.content .raw{
+ .raw{
     margin-top: 10px;
     /* height: 170px; */
     height: 100%;
 }
 
-.content .raw .raw-one{
+ .raw .raw-one{
     height: 170px;
     width: 234px;
     padding: 3px;
@@ -403,7 +403,7 @@
 
 }
 
-.content .raw .raw-one .raw-item{
+ .raw .raw-one .raw-item{
     width: 30%;
     height: 50%;
     padding: .5px;
@@ -413,22 +413,22 @@
 
 }
 
-.content .raw .raw-one .raw-item img{
+ .raw .raw-one .raw-item img{
     width: 24px;
     margin-top: 18px;
 }
 
-.content .raw .raw-one .raw-item span{
+ .raw .raw-one .raw-item span{
     color: #fff; 
     font-size: 12px;
     display: block;
 }
 
-.content .raw .raw-first{
+ .raw .raw-first{
     background-color: #5f5750;
 }
 
-.content .raw .raw-img{
+ .raw .raw-img{
     /* width: 316px; */
     width: 25%;
     height: 170px;
@@ -436,17 +436,17 @@
     /* background: url("imgs/img1.jpg");
     background-size: cover; */
 }
-.content .raw .raw-img.img1{
+ .raw .raw-img.img1{
     background: url("imgs/img1.jpg");
     background-size: cover;
 }
 
-.content .raw .raw-img.img2{
+ .raw .raw-img.img2{
     background: url("imgs/img2.jpg");
     background-size: cover;
 }
 
-.content .raw .raw-img.img3{
+ .raw .raw-img.img3{
     background: url("imgs/img3.jpg");
     background-size: cover;
 }
@@ -491,4 +491,22 @@
 
 .us .us-info .slogan img{
     height: 100%;
+}
+
+.container-detail{
+    padding: 20px 0;
+}
+
+.detail{
+    color: #333;
+    font-size: 22px;
+    font-weight: 200;
+}
+
+.detail img{
+    margin-top: 10px;
+}
+
+.detail1 .buttons{
+    float: right;
 }

@@ -45,22 +45,30 @@ window.onload= function(){
     this.banner();
 }
 
+var currentBannerIndex = 1;
+var lastBannerIndex = 0;
 function banner(){
-    var banners = document.getElementsByClassName("banner-real")[0];
-    var pagination = document.getElementsByClassName("pagination")[0];
-    var i = 1;
-    var len = banners.children.length;
-    var last = 0;
+    
+    
     setInterval(function(){
-        console.log(i);
-        
-        banners.children[i].classList.add('active');
-        pagination.children[i].classList.add('active');
-        if(undefined != last){
-            banners.children[last].classList.remove('active');
-            pagination.children[last].classList.remove('active');
-        }
-        last = i;
-        i = (i +1) % len;
+        switchBanner();
     }, 2800);
 }
+
+function switchBanner () {
+    console.log(currentBannerIndex);
+    var banners = document.getElementsByClassName("banner-real")[0];
+    var pagination = document.getElementsByClassName("pagination")[0];
+    
+    var len = banners.children.length;
+    
+    banners.children[currentBannerIndex].classList.add('active');
+    pagination.children[currentBannerIndex].classList.add('active');
+    if(undefined != lastBannerIndex){
+        banners.children[lastBannerIndex].classList.remove('active');
+        pagination.children[lastBannerIndex].classList.remove('active');
+    }
+    lastBannerIndex = currentBannerIndex;
+    currentBannerIndex = (currentBannerIndex +1) % len;
+}
+
