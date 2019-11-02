@@ -6,6 +6,7 @@ window.onload= function(){
     container.style.width = w;
     container.style.height = h;
 
+    //nav 相关
     var navItemTitles = document.getElementsByClassName("nav-item-title");
     var navDropMenu = document.getElementsByClassName("nav-drop-menu");
     for(var i = 0; i < navItemTitles.length; i++){
@@ -22,6 +23,7 @@ window.onload= function(){
         })
     }
 
+    //catagory相关
     var catagory = this.document.getElementById("catagory");
     var catagoryUl = catagory.firstElementChild;
     for(var i = 0; i < catagoryUl.childNodes.length; i++){
@@ -42,6 +44,14 @@ window.onload= function(){
         }
     }
 
+    //banner 相关
+    var banners = document.getElementsByClassName("banner-real")[0];
+    banners.addEventListener('mouseover', function(){
+        stopBanner();
+    });
+    banners.addEventListener('mouseout', function(){
+        startBanner();
+    });
     this.startBanner();
 }
 
@@ -49,13 +59,16 @@ var currentBannerIndex = 0;
 var lastBannerIndex = 0;
 var bannerTask;
 function startBanner(){
-    bannerTask = setInterval(function(){
-        switchBanner(1);
-    }, 2800);
+    if(!bannerTask){
+        bannerTask = setInterval(function(){
+            switchBanner(1);
+        }, 2800);
+    }
 }
 function stopBanner(){
     if(bannerTask){
         clearInterval(bannerTask);
+        bannerTask = null;
     }
 }
 
@@ -83,6 +96,7 @@ function bannerActive(activeIndex){
         banners.children[lastBannerIndex].classList.remove('active');
         pagination.children[lastBannerIndex].classList.remove('active');
     }
+    currentBannerIndex = activeIndex;
     lastBannerIndex = activeIndex;
 }
 
