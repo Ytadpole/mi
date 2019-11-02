@@ -42,21 +42,28 @@ window.onload= function(){
         }
     }
 
-    this.banner();
+    this.startBanner();
 }
 
 var currentBannerIndex = 0;
 var lastBannerIndex = 0;
-function banner(){
-    setInterval(function(){
+var bannerTask;
+function startBanner(){
+    bannerTask = setInterval(function(){
         switchBanner(1);
     }, 2800);
+}
+function stopBanner(){
+    if(bannerTask){
+        clearInterval(bannerTask);
+    }
 }
 
 function switchBanner (step) {
     var banners = document.getElementsByClassName("banner-real")[0];
     var len = banners.children.length;
     currentBannerIndex = (currentBannerIndex + step) % len;
+    currentBannerIndex = currentBannerIndex < 0 ? currentBannerIndex + len : currentBannerIndex;
     bannerActive(currentBannerIndex);
 }
 
