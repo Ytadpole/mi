@@ -45,30 +45,37 @@ window.onload= function(){
     this.banner();
 }
 
-var currentBannerIndex = 1;
+var currentBannerIndex = 0;
 var lastBannerIndex = 0;
 function banner(){
-    
-    
     setInterval(function(){
-        switchBanner();
+        switchBanner(1);
     }, 2800);
 }
 
-function switchBanner () {
-    console.log(currentBannerIndex);
+function switchBanner (step) {
+    var banners = document.getElementsByClassName("banner-real")[0];
+    var len = banners.children.length;
+    currentBannerIndex = (currentBannerIndex + step) % len;
+    bannerActive(currentBannerIndex);
+}
+
+function bannerActive(activeIndex){
     var banners = document.getElementsByClassName("banner-real")[0];
     var pagination = document.getElementsByClassName("pagination")[0];
     
     var len = banners.children.length;
+    activeIndex = activeIndex < 0 ? len - 1 : activeIndex;
+    activeIndex = activeIndex > len - 1 ? 0 : activeIndex;
     
-    banners.children[currentBannerIndex].classList.add('active');
-    pagination.children[currentBannerIndex].classList.add('active');
-    if(undefined != lastBannerIndex){
+   
+    if(lastBannerIndex != activeIndex){
+        banners.children[activeIndex].classList.add('active');
+        pagination.children[activeIndex].classList.add('active');
+
         banners.children[lastBannerIndex].classList.remove('active');
         pagination.children[lastBannerIndex].classList.remove('active');
     }
-    lastBannerIndex = currentBannerIndex;
-    currentBannerIndex = (currentBannerIndex +1) % len;
+    lastBannerIndex = activeIndex;
 }
 

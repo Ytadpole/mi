@@ -266,8 +266,8 @@
     background: url(imgs/icon-slides.png) no-repeat -84px 50%;
 }
 .banner  .banner-left:hover{
-    left: 234px;
     background-position-x: 0;
+    cursor: pointer;
 }
 .banner .banner-right{
     right: 0;
@@ -275,6 +275,7 @@
 }
 .banner .banner-right:hover{
     background-position-x: -41px;
+    cursor: pointer;
 }
 
 .banner .banner-real .banner-item{

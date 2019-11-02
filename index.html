@@ -104,14 +104,14 @@
                         <div class="banner-item"><img src="imgs/banner/banner5.jpg"></div>
 
                     </div>
-                    <div id="banner-left" onclick="switchBanner()" class="banner-left"></div>
-                    <div id="banner-right" class="banner-right"></div>
+                    <div id="banner-left" onclick="switchBanner(-1)" class="banner-left"></div>
+                    <div id="banner-right" onclick="switchBanner(1)" class="banner-right"></div>
                     <div class="pagination">
-                        <span class="pagination-item active"></span>
-                        <span class="pagination-item"></span>
-                        <span class="pagination-item"></span>
-                        <span class="pagination-item"></span>
-                        <span class="pagination-item"></span>
+                        <span class="pagination-item active" onclick="bannerActive(0)"></span>
+                        <span class="pagination-item" onclick="bannerActive(1)"></span>
+                        <span class="pagination-item" onclick="bannerActive(2)"></span>
+                        <span class="pagination-item" onclick="bannerActive(3)"></span>
+                        <span class="pagination-item" onclick="bannerActive(4)"></span>
                     </div>
                     <div id="catagory" class="catagory">
                         <ul>
