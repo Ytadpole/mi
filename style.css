@@ -503,6 +503,8 @@
     font-weight: 200;
 }
 
+
+
 .detail img{
     margin-top: 10px;
 }
@@ -516,6 +518,83 @@
     line-height: 58px;
 }
 
+.detail .detail-body{
+    height: 339px;
+}
+
 .detail1 .buttons{
     float: right;
+}
+
+.detail1 .detail1-first{
+    height: 100%;
+    width: 234px;
+    background: #f1eded;
+    float: left;
+}
+
+.detail1 .detail1-first p{
+    color: #ef3a3b;
+    font-size: 21px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.detail1 .detail1-first img{
+    width: 34px;
+    height: 53px;
+    margin: 30px auto 0;
+    display: block;
+}
+
+.detail1 .detail1-banner{
+    width: 978px;
+    height: 100%;
+    float: left;
+    margin-left: 10px;
+    overflow: hidden;
+}
+.detail1 .detail1-banner ul{
+    list-style: none;
+}
+
+.detail1 .detail1-banner ul li{
+    width: 234px;
+    /* display: inline-block; */
+    float: left;
+    border-top: 1px solid red;
+    margin-left: 10px;
+}
+
+.detail1 .detail1-banner ul li .detail1-banner-item img{
+    text-align: center;
+    display: block;
+    margin: 10px auto;
+}
+
+.detail1 .detail1-banner ul li .detail1-banner-item .item-title{
+    font-size: 14px;
+    text-align: center;
+    font-weight: 400;
+    color: #212121;
+    margin: 0 20px;
+}
+
+.detail1 .detail1-banner ul li .detail1-banner-item .item-desc{
+    font-size: 12px;
+    text-align: center;
+
+    color: #b0b0b0;
+    height: 18px;
+    margin: 5px 20px 12px;
+}
+
+.detail1 .detail1-banner ul li .detail1-banner-item .price{
+    color: #ff6700;
+    text-align: center;
+    font-size: 14px;
+}
+
+.detail1 .detail1-banner ul li .detail1-banner-item .price span{
+    color: #444;
 }
