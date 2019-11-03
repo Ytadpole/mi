@@ -45,19 +45,36 @@ window.onload= function(){
     }
 
     //banner 相关
-    var banners = document.getElementsByClassName("banner-real")[0];
-    banners.addEventListener('mouseover', function(){
-        stopBanner();
-    });
-    banners.addEventListener('mouseout', function(){
-        startBanner();
-    });
+    this.initBannerComponent();
     this.startBanner();
 }
 
 var currentBannerIndex = 0;
 var lastBannerIndex = 0;
 var bannerTask;
+function initBannerComponent(){
+    var banners = document.getElementsByClassName("banner-real")[0];
+    initBannerEvent(banners);
+
+    var bannerLeft = document.getElementById("banner-left");
+    var bannerRight = document.getElementById("banner-right");
+    initBannerEvent(bannerLeft);
+    initBannerEvent(bannerRight);
+    var paginationItems = document.getElementsByClassName('pagination-item');
+    for(var i = 0; i < paginationItems.length; i++){``
+        initBannerEvent(paginationItems[i]);
+    }
+}
+
+function initBannerEvent(ele){
+    ele.addEventListener('mouseover', function(){
+        stopBanner();
+    });
+    ele.addEventListener('mouseout', function(){
+        startBanner();
+    });
+}
+
 function startBanner(){
     if(!bannerTask){
         bannerTask = setInterval(function(){
