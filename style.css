@@ -531,6 +531,7 @@
     width: 234px;
     background: #f1eded;
     float: left;
+    border-top: 1px solid green;
 }
 
 .detail1 .detail1-first p{
